@@ -224,22 +224,22 @@ let allQuestions = [
       explanation: "Exactly! HAVE TO expressa uma necessidade ou obrigação."
     },
     {
-      text: "can",
+      text: "can't",
       score: 0,
       type: "Wrong",
-      explanation: "CAN indica possibilidade ou permissão. A frase fala de uma obrigação."
+      explanation: "CAN'T indica possibilidade ou permissão. A frase fala de uma obrigação."
     },
     {
       text: "may",
       score: 0,
       type: "Wrong",
-      explanation: "MAY indica permissão ou possibilidade. Não é isso que a frase expressa."
+      explanation: "MAY indica permissão ou possibilidade. Se eles não chegarem a tempo, não podem jogar. Então eles são obrigados a chegar cedo."
     },
     {
       text: "should",
       score: 0,
       type: "Wrong",
-      explanation: "SHOULD é apenas um conselho. Se não chegarem a tempo, não podem jogar. Então eles são obrigados a chegar cedo"
+      explanation: "SHOULD é apenas um conselho. Se eles não chegarem a tempo, não podem jogar. Então eles são obrigados a chegar cedo."
     }
   ]
 },
