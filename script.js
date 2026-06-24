@@ -95,225 +95,484 @@ currentRound = 1;
 
 let allQuestions = [
   {
-  text: "Your friend returned your hoodie with a stain. What do you say?",
+  text: "Players who receive a red card _____ leave the field immediately.",
   options: [
-    { text: "What did you do to my hoodie?!", score: 0, type: "too direct", explanation: "Direct accusation ('you') with no softener or question. Sounds aggressive." },
-
-    { text: "Hey, I think there’s a stain here—do you know what happened?", score: 1, type: "appropriate", explanation: "Uses softener ('I think') + indirect question. reduces blame and keeps it friendly." },
-
-    { text: "There’s a stain on this.", score: 0.5, type: "acceptable", explanation: "Clear statement, but no softener or question. More direct." },
-
-    { text: "It's fine.", score: 0, type: "too indirect", explanation: "Avoids the issue completely. Lacks request or clarification." }
+    {
+      text: "can't",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN'T significa que algo não é permitido ou não é possível. Aqui a frase precisa expressar uma obrigação."
+    },
+    {
+      text: "shouldn't",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULDN'T é usado para dar conselho. Receber um cartão vermelho não é um conselho, é uma regra."
+    },
+    {
+      text: "must",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MUST é usado para regras e obrigações. Jogadores com cartão vermelho devem sair do campo."
+    },
+    {
+      text: "may not",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY NOT indica proibição ou possibilidade negativa. Aqui precisamos expressar obrigação."
+    }
   ]
 },
 
-  {
-  text: "You are late to meet your friend. What do you say?",
+{
+  text: "Fans _____ bring fireworks into a World Cup stadium.",
   options: [
-    { text: "I'm late.", score: 0, type: "too blunt", explanation: "States the problem, but no apology or repair strategy." },
-
-    { text: "Sorry I'm late! I'll be there in 10 minutes.", score: 1, type: "appropriate", explanation: "Uses apology ('sorry') + repair (time info). Socially appropriate." },
-
-    { text: "Hey, I’m running a bit late.", score: 0.5, type: "acceptable", explanation: "Uses softener ('a bit'), but lacks full repair (no timing or solution)." },
-
-    { text: "Relax.", score: 0, type: "dismissive", explanation: "Dismisses the other person’s perspective. No apology or responsibility." }
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN indica permissão ou possibilidade. Fogos de artifício não são permitidos no estádio."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma proibição."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY pode indicar permissão. Neste caso os torcedores não têm essa permissão."
+    },
+    {
+      text: "mustn't",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MUSTN'T é usado para proibições. Não é permitido levar fogos de artifício ao estádio."
+    }
   ]
 },
 
-  {
-  text: "You want extra time for an assignment. What do you say?",
+{
+  text: "Unlike other players, goalkeepers _____ use their hands inside the penalty area.",
   options: [
-    { text: "Give me more time.", score: 0, type: "too direct", explanation: "Direct command. Lacks modal or softener." },
-
-    { text: "Could I possibly have an extra day to finish this?", score: 1, type: "appropriate", explanation: "Uses modal ('could') + softener ('possibly'). Polite and indirect request." },
-
-    { text: "Is it okay if I turn it in late?", score: 0.5, type: "acceptable", explanation: "Polite question, but lacks additional mitigation (no softener or justification)." },
-
-    { text: "I didn’t do it.", score: 0, type: "avoidance", explanation: "States problem, but no request or solution." }
+    {
+      text: "can",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! CAN expressa permissão. Goleiros podem usar as mãos dentro da área."
+    },
+    {
+      text: "can't",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN'T significaria que os goleiros não podem usar as mãos, o que não é verdade."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD expressa conselho. A frase fala sobre uma permissão."
+    },
+    {
+      text: "have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO indica obrigação. Os goleiros podem usar as mãos, mas não são obrigados a fazer isso."
+    }
   ]
 },
 
-  {
-  text: "You think your teacher graded you unfairly. What do you say?",
+{
+  text: "A player with a serious injury _____ keep playing without medical attention. It is dangerous.",
   options: [
-    { text: "This grade is wrong.", score: 0, type: "too direct", explanation: "Direct statement with no softener. Threatens face." },
-
-    { text: "I was wondering if we could review my grade together.", score: 1, type: "appropriate", explanation: "Uses intro phrase ('I was wondering if') + collaborative tone. Reduces imposition." },
-
-    { text: "I think there might be a mistake.", score: 0.5, type: "acceptable", explanation: "Uses softeners ('I think', 'might'), but lacks collaboration." },
-
-    { text: "You made a mistake.", score: 0, type: "accusatory", explanation: "Direct accusation ('you'). Confrontational." }
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN expressa possibilidade ou habilidade. A frase está dando um conselho."
+    },
+    {
+      text: "shouldn't",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! SHOULDN'T é usado para aconselhar contra algo. Continuar jogando machucado é perigoso."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica possibilidade ou permissão. Aqui estamos dando uma recomendação."
+    },
+    {
+      text: "have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO indica obrigação. Um jogador machucado não é obrigado a continuar jogando."
+    }
   ]
 },
 
-  {
-  text: "A server brought you the wrong drink. What do you say?",
+{
+  text: "Teams _____ arrive at the stadium before the match starts. If they don't, they cannot play.",
   options: [
-    { text: "This is wrong.", score: 0, type: "too direct", explanation: "Blunt statement. Lacks softener or request." },
-
-    { text: "Excuse me, I think I ordered a Sprite.", score: 1, type: "appropriate", explanation: "Uses softener ('I think') + indirect correction. Polite." },
-
-    { text: "I asked for something else.", score: 0.5, type: "acceptable", explanation: "Clear, but lacks softener. Direct and blunt." },
-
-    { text: "Whatever.", score: 0, type: "dismissive", explanation: "Dismissive response. No communication strategy." }
+    {
+      text: "have to",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! HAVE TO expressa uma necessidade ou obrigação."
+    },
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN indica possibilidade ou permissão. A frase fala de uma obrigação."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica permissão ou possibilidade. Não é isso que a frase expressa."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é apenas um conselho. Se não chegarem a tempo, não podem jogar. Então eles são obrigados a chegar cedo"
+    }
   ]
 },
 
-  {
-  text: "You didn’t understand the homework. What do you say?",
+{
+  text: "Fans _____ buy a ticket to enter the stadium. No ticket, no entry.",
   options: [
-    { text: "I don't get it.", score: 0, type: "too blunt", explanation: "Direct statement. No modal or softener." },
-
-    { text: "Could you explain it again, please?", score: 1, type: "appropriate", explanation: "Uses modal ('could') + 'please'. Polite request." },
-
-    { text: "I’m not sure I understood. Could you go over it again?", score: 1, type: "appropriate", explanation: "Takes responsibility + uses modal ('could'). Strong face-saving strategy." },
-
-    { text: "This makes no sense.", score: 0, type: "negative", explanation: "Critical statement. Threatens listener’s face." }
+    {
+      text: "can't",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN'T indica proibição. A frase fala de uma exigência para entrar."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é um conselho. Comprar o ingresso é obrigatório."
+    },
+    {
+      text: "have to",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! HAVE TO expressa uma obrigação para entrar no estádio."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica permissão ou possibilidade. Aqui é uma exigência."
+    }
   ]
 },
 
-  {
-  text: "It is 11:30 PM and your neighbor is playing loud music. What do you say?",
+{
+  text: "Spectators _____ sit anywhere they want during the match. They must use their assigned seats.",
   options: [
-    { text: "Turn that music down right now!", score: 0, type: "too direct", explanation: "Direct command. No softener or modal." },
-
-    { text: "Sorry to bother you, but it’s quite loud and I have an exam tomorrow. Would it be possible to lower it?", score: 1, type: "appropriate", explanation: "Uses apology + softener ('quite') + modal ('would it be possible'). Very polite." },
-
-    { text: "It’s really loud.", score: 0.5, type: "acceptable", explanation: "States problem, but no request or softener." },
-
-    { text: "You’re being inconsiderate.", score: 0, type: "too harsh", explanation: "Judgment ('you'). Escalates conflict." }
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala de algo que não é permitido."
+    },
+    {
+      text: "can't",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! CAN'T indica que algo não é permitido."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indicaria permissão, mas os torcedores não têm essa permissão."
+    },
+    {
+      text: "have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO significaria que eles são obrigados a sentar onde quiserem, o que não faz sentido."
+    }
   ]
 },
 
-  {
-  text: "You are at a restaurant and your fork is dirty. What do you say?",
+{
+  text: "The referee _____ stop the game if there is dangerous weather, but the decision is up to him.",
   options: [
-    { text: "This is dirty. Bring me another one.", score: 0, type: "too direct", explanation: "Blunt statement + command. No softener or modal." },
-
-    { text: "Excuse me, there seems to be a slight problem with this fork. Could I get another one?", score: 1, type: "appropriate", explanation: "Uses 'there seems to be' + 'slight' + modal ('could'). Highly mitigated request." },
-
-    { text: "I think this isn’t clean. Could I have another one?", score: 0.5, type: "appropriate", explanation: "Uses softener ('I think') + modal ('could')." },
-
-    { text: "Um… this fork…", score: 0, type: "too indirect", explanation: "Too vague. No clear request." }
+    {
+      text: "may",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MAY indica que algo é permitido ou possível."
+    },
+    {
+      text: "can't",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN'T indicaria que o árbitro não pode parar o jogo, o que não é verdade."
+    },
+    {
+      text: "shouldn't",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULDN'T significaria que ele não deveria parar o jogo."
+    },
+    {
+      text: "don't have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "DON'T HAVE TO indica ausência de obrigação, mas a frase fala sobre uma opção permitida."
+    }
   ]
 },
 
-  {
-  text: "Your friend is 30 minutes late and hasn’t texted you. What do you say?",
+{
+  text: "Fans _____ travel to another country to enjoy the World Cup. They can watch it on TV.",
   options: [
-    { text: "You’re always late. It’s so annoying.", score: 0, type: "too harsh", explanation: "Uses 'always' + direct criticism. Escalates conflict." },
-
-    { text: "Hey, I’ve been waiting for a bit—is everything okay?", score: 1, type: "appropriate", explanation: "Uses softener ('a bit') + indirect concern. Polite and non-accusatory." },
-
-    { text: "You’re late.", score: 0.5, type: "acceptable", explanation: "Clear, but no softener or question. More direct." },
-
-    { text: "Whatever.", score: 0, type: "dismissive", explanation: "Avoids communication." }
+    {
+      text: "mustn't",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUSTN'T indica proibição. Viajar não é proibido."
+    },
+    {
+      text: "don't have to",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! DON'T HAVE TO significa que algo não é necessário."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala sobre necessidade."
+    },
+    {
+      text: "have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO indicaria obrigação. Os torcedores podem assistir pela TV."
+    }
   ]
 },
 
-  {
-  text: "You want your teacher to check one of your answers. What do you say?",
+{
+  text: "Players _____ respect the referee's decisions during the match.",
   options: [
-    { text: "Check this.", score: 0, type: "too direct", explanation: "Command. No modal or softener." },
-
-    { text: "I was wondering if you could double-check this answer for me?", score: 1, type: "appropriate", explanation: "Uses intro phrase + modal ('could'). Very polite request." },
-
-    { text: "Can you check this?", score: 0.5, type: "acceptable", explanation: "Uses modal ('can'), but less formal/softened." },
-
-    { text: "This is wrong, right?", score: 0, type: "problematic", explanation: "Pushes the teacher. Sounds leading or insecure." }
+    {
+      text: "can't",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN'T indicaria proibição. A frase fala sobre uma obrigação."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica permissão. Respeitar o árbitro não é opcional."
+    },
+    {
+      text: "must",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MUST é usado para regras e obrigações."
+    },
+    {
+      text: "don't have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "DON'T HAVE TO significa que algo não é necessário. Respeitar o árbitro é obrigatório."
+    }
   ]
 },
 
-  {
-  text: "Your food arrives, but it is cold. What do you say?",
+{
+  text: "A coach _____ enter the field during the game without permission.",
   options: [
-    { text: "This is cold. Take it back.", score: 0, type: "too direct", explanation: "Blunt statement + command. No softening." },
-
-    { text: "Actually, I think this is a little cold. Could I get a new one?", score: 1, type: "appropriate", explanation: "Uses softener ('I think', 'a little') + modal ('could')." },
-
-    { text: "This is kind of cold.", score: 0.5, type: "acceptable", explanation: "Uses softener ('kind of'), but no request." },
-
-    { text: "Never mind.", score: 0, type: "avoidance", explanation: "Avoids the issue. No communication." }
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN indica permissão. O técnico não tem essa permissão."
+    },
+    {
+      text: "can't",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! CAN'T indica que algo não é permitido."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma regra."
+    },
+    {
+      text: "have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO indica obrigação. O técnico não é obrigado a entrar em campo. Muito pelo contrário."
+    }
   ]
 },
 
-  {
-  text: "A classmate keeps interrupting you while you're speaking. What do you say?",
+{
+  text: "Fans _____ bring food from home because food is available inside the stadium.",
   options: [
-    { text: "Stop interrupting me.", score: 0, type: "too direct", explanation: "Direct command. No softener." },
-
-    { text: "Hey, could I finish what I was saying?", score: 1, type: "appropriate", explanation: "Uses modal ('could'). Assertive but not rude." },
-
-    { text: "Let me talk.", score: 0.5, type: "acceptable", explanation: "Clear, but no softener. Very direct." },
-
-    { text: "You never listen.", score: 0, type: "too harsh", explanation: "Uses 'never'. Overgeneralization and criticism." }
+    {
+      text: "don't have to",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! DON'T HAVE TO significa que algo não é necessário."
+    },
+    {
+      text: "must",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST indicaria obrigação. Os torcedores não são obrigados a levar comida."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é um conselho. A frase fala sobre necessidade."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica permissão. O foco da frase é que não é necessário levar comida."
+    }
   ]
 },
 
-  {
-  text: "The classroom is very cold. What do you say to your teacher?",
+{
+  text: "Players _____ argue aggressively with the referee. It is against the rules.",
   options: [
-    { text: "It's cold. Turn on the heat.", score: 0, type: "too direct", explanation: "Command. No mitigation." },
-
-    { text: "I'm sorry, but the room is a bit cold. Could we turn on the heat?", score: 1, type: "appropriate", explanation: "Uses softener ('a bit') + modal ('could') + apology." },
-
-    { text: "It's kind of cold.", score: 0.5, type: "acceptable", explanation: "Uses softener, but no request." },
-
-    { text: "This room is freezing.", score: 0, type: "too strong", explanation: "Exaggeration + no request." }
-  ]
-}, 
-
-  {
-  text: "A classmate in your group is not contributing. What do you say?",
-  options: [
-    { text: "You’re not doing anything.", score: 0, type: "too direct", explanation: "Direct accusation. Confrontational." },
-
-    { text: "Hey, could we divide the work a bit differently so everyone has a part?", score: 1, type: "appropriate", explanation: "Uses modal ('could') + softener ('a bit'). Indirect and collaborative." },
-
-    { text: "We need more help.", score: 0.5, type: "acceptable", explanation: "Indirect, but not very specific." },
-
-    { text: "You never help.", score: 0, type: "too harsh", explanation: "Uses 'never'. Overgeneralization." }
-  ]
-}, 
-
-  {
-  text: "Your friend is talking loudly during a movie. What do you say?",
-  options: [
-    { text: "Be quiet.", score: 0, type: "too direct", explanation: "Command. No softener." },
-
-    { text: "Hey, could you lower your voice a bit?", score: 1, type: "appropriate", explanation: "Uses modal ('could') + softener ('a bit')." },
-
-    { text: "You’re very loud.", score: 0.5, type: "acceptable", explanation: "Clear, but no softener or request." },
-
-    { text: "You’re ruining this.", score: 0, type: "too harsh", explanation: "Blames the person. Escalates." }
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma proibição."
+    },
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN indica permissão. Os jogadores não têm essa permissão."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica possibilidade ou permissão. A ação é proibida."
+    },
+    {
+      text: "mustn't",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MUSTN'T é usado para proibições."
+    }
   ]
 },
 
-  {
-  text: "You need to email your teacher because your assignment is late. What do you say?",
+{
+  text: "Players _____ wear shin guards during a match.",
   options: [
-    { text: "I'm submitting it late.", score: 0, type: "too blunt", explanation: "No apology or mitigation." },
-
-    { text: "I'm sorry for the delay. I was wondering if I could still submit the assignment.", score: 1, type: "appropriate", explanation: "Uses apology + intro phrase + modal. Very appropriate." },
-
-    { text: "Can I still send it?", score: 0.5, type: "acceptable", explanation: "Uses modal ('can'), but lacks apology and formality." },
-
-    { text: "This deadline was unfair.", score: 0, type: "confrontational", explanation: "Criticizes authority. Inappropriate tone." }
+    {
+      text: "must",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MUST é usado para regras e obrigações."
+    },
+    {
+      text: "don't have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "DON'T HAVE TO significaria que não é necessário usar caneleiras."
+    },
+    {
+      text: "may",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY indica permissão. O uso de caneleiras é obrigatório."
+    },
+    {
+      text: "shouldn't",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULDN'T significaria que não deveriam usar caneleiras."
+    }
   ]
 },
 
-  {
-  text: "You receive a bill that seems too high. What do you say?",
+{
+  text: "A substitute player _____ enter the field before the referee gives permission.",
   options: [
-    { text: "This is wrong.", score: 0, type: "too direct", explanation: "Blunt statement. No softener." },
-
-    { text: "Excuse me, I think there might be a mistake on the bill.", score: 1, type: "appropriate", explanation: "Uses softeners ('I think', 'might'). Polite correction." },
-
-    { text: "This seems high.", score: 0.5, type: "acceptable", explanation: "Uses softener ('seems'), but no clear request." },
-
-    { text: "You overcharged me.", score: 0, type: "accusatory", explanation: "Direct accusation. Confrontational." }
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN indica permissão. O jogador não tem essa permissão."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma regra."
+    },
+    {
+      text: "must",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST indicaria obrigação. O jogador não é obrigado a entrar."
+    },
+    {
+      text: "can't",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! CAN'T indica que algo não é permitido."
+    }
   ]
-}
+},
+
+{
+  text: "Visitors _____ enter the players' locker room without special permission.",
+  options: [
+    {
+      text: "can",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN indica permissão. Os visitantes não têm essa permissão."
+    },
+    {
+      text: "should",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD é usado para conselhos. A frase fala sobre permissão."
+    },
+    {
+      text: "have to",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO indica obrigação. Os visitantes não são obrigados a entrar."
+    },
+    {
+      text: "may not",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MAY NOT indica que algo não é permitido."
+    }
+  ]
+},
 ];
 
 
