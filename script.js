@@ -95,245 +95,609 @@ currentRound = 1;
 
 let allQuestions = [
   {
-  text: "Players who receive a red card _____ leave the field immediately.",
+  text: "What does MUST usually express?",
   options: [
+   
     {
-      text: "can't",
+      text: "Advice",
       score: 0,
       type: "Wrong",
-      explanation: "CAN'T significa que algo não é permitido ou não é possível. Aqui a frase precisa expressar uma obrigação."
+      explanation: "Advice is usually expressed with SHOULD."
     },
-    {
-      text: "shouldn't",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULDN'T é usado para dar conselho. Receber um cartão vermelho não é um conselho, é uma regra."
-    },
-    {
-      text: "must",
+
+     {
+      text: "Strong obligation",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! MUST é usado para regras e obrigações. Jogadores com cartão vermelho devem sair do campo."
+      explanation: "Exactly! MUST is used to express a strong obligation or rule."
     },
+    
     {
-      text: "may not",
+      text: "Ability",
       score: 0,
       type: "Wrong",
-      explanation: "MAY NOT indica proibição ou possibilidade negativa. Aqui precisamos expressar obrigação."
+      explanation: "Ability is usually expressed with CAN."
+    },
+    {
+      text: "Possibility",
+      score: 0,
+      type: "Wrong",
+      explanation: "Possibility is usually expressed with MAY or MIGHT."
+    }
+  ]
+},
+
+  {
+  text: "Which sentence expresses possibility?",
+  options: [
+    {
+      text: "You might need an umbrella.",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! MIGHT expresses a possible situation that is not certain."
+    },
+    {
+      text: "You must need an umbrella.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST does not express possibility here."
+    },
+    {
+      text: "You should need an umbrella.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD is not used this way."
+    },
+    {
+      text: "You have to need an umbrella.",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO is not used to express possibility."
+    }
+  ]
+},
+
+  {
+  text: "Which sentence expresses an external obligation?",
+  options: [
+    {
+      text: "You should wear a seat belt.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD gives advice, not an external obligation."
+    },
+    {
+      text: "You can wear a seat belt.",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN expresses possibility or permission."
+    },
+    {
+      text: "You have to wear a seat belt.",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! The law creates the obligation, so HAVE TO is the best choice."
+    },
+    {
+      text: "You might wear a seat belt.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MIGHT expresses possibility."
+    }
+  ]
+},
+  
+{
+  text: "What does HAVE TO usually express?",
+  options: [
+    {
+      text: "External obligation",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! HAVE TO expresses an obligation caused by a situation, rule or authority."
+    },
+    {
+      text: "Advice",
+      score: 0,
+      type: "Wrong",
+      explanation: "Advice is usually expressed with SHOULD."
+    },
+    {
+      text: "Permission",
+      score: 0,
+      type: "Wrong",
+      explanation: "Permission is usually expressed with MAY or CAN."
+    },
+    {
+      text: "Ability",
+      score: 0,
+      type: "Wrong",
+      explanation: "Ability is usually expressed with CAN."
+    }
+  ]
+},
+
+  {
+  text: "Which expression means 'mal posso esperar'?",
+  options: [
+    {
+      text: "have fun",
+      score: 0,
+      type: "Wrong",
+      explanation: "'Have fun' means 'divirta-se'."
+    },
+    {
+      text: "can't wait",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! 'Can't wait' means 'mal posso esperar'."
+    },
+    {
+      text: "be careful",
+      score: 0,
+      type: "Wrong",
+      explanation: "'Be careful' means 'tenha cuidado'."
+    },
+    {
+      text: "ask for help",
+      score: 0,
+      type: "Wrong",
+      explanation: "'Ask for help' means 'pedir ajuda'."
+    }
+  ]
+},
+
+  {
+  text: "Which sentence expresses a strong obligation?",
+  options: [
+    {
+      text: "You must keep your phone close.",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! MUST expresses a strong obligation."
+    },
+    {
+      text: "You should keep your phone close.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD expresses advice."
+    },
+    {
+      text: "You may keep your phone close.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY expresses permission or possibility."
+    },
+    {
+      text: "You can keep your phone close.",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN expresses ability or possibility."
+    }
+  ]
+},
+  
+{
+  text: "What does SHOULD usually express?",
+  options: [
+     {
+      text: "Permission",
+      score: 0,
+      type: "Wrong",
+      explanation: "Permission is usually expressed with MAY."
+    },
+  
+    {
+      text: "Strong obligation",
+      score: 0,
+      type: "Wrong",
+      explanation: "Strong obligation is expressed with MUST."
+    },
+    {
+      text: "Ability",
+      score: 0,
+      type: "Wrong",
+      explanation: "Ability is expressed with CAN."
+    },
+
+     {
+      text: "Advice",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! SHOULD is used to give advice or recommendations."
+    }
+  ]
+},
+  
+{
+  text: "What does CAN usually express?",
+  options: [
+    {
+      text: "Strong obligation",
+      score: 0,
+      type: "Wrong",
+      explanation: "Strong obligation is expressed with MUST."
+    },
+    {
+      text: "Advice",
+      score: 0,
+      type: "Wrong",
+      explanation: "Advice is expressed with SHOULD."
+    },
+    {
+      text: "Ability or permission",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! CAN is commonly used to express ability or possibility."
+    },
+    {
+      text: "External obligation",
+      score: 0,
+      type: "Wrong",
+      explanation: "External obligation is expressed with HAVE TO."
+    }
+  ]
+},
+
+ {
+  text: "Which sentence expresses permission?",
+  options: [
+    {
+      text: "You must take photos here.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST expresses obligation."
+    },
+    {
+      text: "You should take photos here.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD gives advice."
+    },
+    {
+      text: "You may take photos here.",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MAY is used to give permission."
+    },
+    {
+      text: "You have to take photos here.",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO expresses an obligation."
+    }
+  ]
+},
+
+  {
+  text: "Which sentence expresses ability?",
+  options: [
+    {
+      text: "She can speak English.",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! CAN is used to express ability."
+    },
+    {
+      text: "She should speak English.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD expresses advice."
+    },
+    {
+      text: "She must speak English.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST expresses obligation."
+    },
+    {
+      text: "She might speak English.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MIGHT expresses possibility."
+    }
+  ]
+},
+
+ {
+  text: "Which sentence expresses a less certain possibility?",
+  options: [
+    {
+      text: "It must rain tomorrow.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST does not express an uncertain possibility."
+    },
+    {
+      text: "It might rain tomorrow.",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MIGHT expresses a possibility that is less certain."
+    },
+    {
+      text: "It should rain tomorrow.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD usually expresses advice or expectation."
+    },
+    {
+      text: "It has to rain tomorrow.",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO expresses necessity, not an uncertain possibility."
+    }
+  ]
+},
+  
+
+{
+  text: "What does MAY usually express?",
+  options: [
+    {
+      text: "Advice",
+      score: 0,
+      type: "Wrong",
+      explanation: "Advice is expressed with SHOULD."
+    },
+    {
+      text: "Strong obligation",
+      score: 0,
+      type: "Wrong",
+      explanation: "Strong obligation is expressed with MUST."
+    },
+    {
+      text: "Ability",
+      score: 0,
+      type: "Wrong",
+      explanation: "Ability is expressed with CAN."
+    },
+    {
+      text: "Permission or possibility",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MAY is commonly used to express permission or possibility."
+    }
+  ]
+},
+
+ {
+  text: "Which sentence expresses possibility?",
+  options: [
+    {
+      text: "They must speak English.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST expresses obligation or strong certainty."
+    },
+    {
+      text: "They should speak English.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD expresses advice."
+    },
+    {
+      text: "They have to speak English.",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO expresses obligation."
+    },
+    {
+      text: "They may speak English.",
+      score: 1,
+      type: "Correct",
+      explanation: "Correct! MAY expresses possibility in this sentence."
+    }
+  ]
+},
+  {
+  text: "Which sentence expresses a rule?",
+  options: [
+    {
+      text: "Students must wear a school uniform.",
+      score: 1,
+      type: "Correct",
+      explanation: "Exactly! MUST is often used to express rules."
+    },
+    {
+      text: "Students should wear a school uniform.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD expresses advice, not a rule."
+    },
+    {
+      text: "Students may wear a school uniform.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY expresses permission."
+    },
+    {
+      text: "Students can wear a school uniform.",
+      score: 0,
+      type: "Wrong",
+      explanation: "CAN expresses ability, permission or possibility."
     }
   ]
 },
 
 {
-  text: "Fans _____ bring fireworks into a World Cup stadium.",
+  text: "What does MIGHT usually express?",
   options: [
     {
-      text: "can",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN indica permissão ou possibilidade. Fogos de artifício não são permitidos no estádio."
-    },
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma proibição."
-    },
-    {
-      text: "may",
-      score: 0,
-      type: "Wrong",
-      explanation: "MAY pode indicar permissão. Neste caso os torcedores não têm essa permissão."
-    },
-    {
-      text: "mustn't",
+      text: "A less certain possibility",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! MUSTN'T é usado para proibições. Não é permitido levar fogos de artifício ao estádio."
+      explanation: "Correct! MIGHT expresses a possibility that is less certain."
+    },
+    {
+      text: "Advice",
+      score: 0,
+      type: "Wrong",
+      explanation: "Advice is expressed with SHOULD."
+    },
+    {
+      text: "Strong obligation",
+      score: 0,
+      type: "Wrong",
+      explanation: "Strong obligation is expressed with MUST."
+    },
+    {
+      text: "Ability",
+      score: 0,
+      type: "Wrong",
+      explanation: "Ability is expressed with CAN."
     }
   ]
 },
 
 {
-  text: "Unlike other players, goalkeepers _____ use their hands inside the penalty area.",
+  text: "Which sentence expresses permission?",
   options: [
     {
-      text: "can",
+      text: "You must enter the museum.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST expresses obligation."
+    },
+    {
+      text: "You should enter the museum.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD expresses advice."
+    },
+    {
+      text: "You may enter the museum.",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! CAN expressa permissão. Goleiros podem usar as mãos dentro da área."
+      explanation: "Exactly! MAY is commonly used to give permission."
     },
     {
-      text: "can't",
+      text: "You have to enter the museum.",
       score: 0,
       type: "Wrong",
-      explanation: "CAN'T significaria que os goleiros não podem usar as mãos, o que não é verdade."
-    },
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD expressa conselho. A frase fala sobre uma permissão."
-    },
-    {
-      text: "have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "HAVE TO indica obrigação. Os goleiros podem usar as mãos, mas não são obrigados a fazer isso."
+      explanation: "HAVE TO expresses obligation."
     }
   ]
 },
 
 {
-  text: "A player with a serious injury _____ keep playing without medical attention. It is dangerous.",
+  text: "Which sentence expresses ability?",
   options: [
     {
-      text: "can",
+      text: "My friend should swim.",
       score: 0,
       type: "Wrong",
-      explanation: "CAN expressa possibilidade ou habilidade. A frase está dando um conselho."
+      explanation: "SHOULD expresses advice."
     },
     {
-      text: "shouldn't",
+      text: "My friend must swim.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MUST expresses obligation."
+    },
+    {
+      text: "My friend may swim.",
+      score: 0,
+      type: "Wrong",
+      explanation: "MAY expresses permission or possibility."
+    },
+    {
+      text: "My friend can swim.",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! SHOULDN'T é usado para aconselhar contra algo. Continuar jogando machucado é perigoso."
-    },
-    {
-      text: "may",
-      score: 0,
-      type: "Wrong",
-      explanation: "MAY indica possibilidade ou permissão. Aqui estamos dando uma recomendação."
-    },
-    {
-      text: "have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "HAVE TO indica obrigação. Um jogador machucado não é obrigado a continuar jogando."
+      explanation: "Correct! CAN expresses ability."
     }
   ]
 },
 
-{
-  text: "Teams _____ arrive at the stadium before the match starts. If they don't, they cannot play.",
+  {
+  text: "Which sentence expresses an external obligation?",
   options: [
     {
-      text: "have to",
+      text: "Passengers have to show their tickets.",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! HAVE TO expressa uma necessidade ou obrigação."
+      explanation: "Correct! HAVE TO expresses an obligation created by a rule or situation."
     },
     {
-      text: "can't",
+      text: "Passengers should show their tickets.",
       score: 0,
       type: "Wrong",
-      explanation: "CAN'T indica possibilidade ou permissão. A frase fala de uma obrigação."
+      explanation: "SHOULD expresses advice."
     },
     {
-      text: "may",
+      text: "Passengers can show their tickets.",
       score: 0,
       type: "Wrong",
-      explanation: "MAY indica permissão ou possibilidade. Se eles não chegarem a tempo, não podem jogar. Então eles são obrigados a chegar cedo."
+      explanation: "CAN expresses ability or permission."
     },
     {
-      text: "should",
+      text: "Passengers might show their tickets.",
       score: 0,
       type: "Wrong",
-      explanation: "SHOULD é apenas um conselho. Se eles não chegarem a tempo, não podem jogar. Então eles são obrigados a chegar cedo."
+      explanation: "MIGHT expresses possibility."
     }
   ]
 },
 
-{
-  text: "Fans _____ buy a ticket to enter the stadium. No ticket, no entry.",
+  {
+  text: "Which sentence expresses possibility?",
   options: [
     {
-      text: "can't",
+      text: "It must rain this afternoon.",
       score: 0,
       type: "Wrong",
-      explanation: "CAN'T indica proibição. A frase fala de uma exigência para entrar."
+      explanation: "MUST does not express possibility in this sentence."
     },
     {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é um conselho. Comprar o ingresso é obrigatório."
-    },
-    {
-      text: "have to",
+      text: "It may rain this afternoon.",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! HAVE TO expressa uma obrigação para entrar no estádio."
+      explanation: "Exactly! MAY expresses possibility."
     },
     {
-      text: "may",
+      text: "It should rain this afternoon.",
       score: 0,
       type: "Wrong",
-      explanation: "MAY indica permissão ou possibilidade. Aqui é uma exigência."
+      explanation: "SHOULD expresses advice or expectation."
+    },
+    {
+      text: "It has to rain this afternoon.",
+      score: 0,
+      type: "Wrong",
+      explanation: "HAVE TO expresses necessity."
     }
   ]
 },
 
-{
-  text: "Spectators _____ sit anywhere they want during the match. They must use their assigned seats.",
+  {
+  text: "Which sentence expresses a less certain possibility?",
   options: [
     {
-      text: "should",
+      text: "She must be late.",
       score: 0,
       type: "Wrong",
-      explanation: "SHOULD é usado para conselhos. A frase fala de algo que não é permitido."
+      explanation: "MUST does not express an uncertain possibility."
     },
     {
-      text: "can't",
+      text: "She should be late.",
+      score: 0,
+      type: "Wrong",
+      explanation: "SHOULD is not used to express an uncertain possibility."
+    },
+    {
+      text: "She might be late.",
       score: 1,
       type: "Correct",
-      explanation: "Exactly! CAN'T indica que algo não é permitido."
+      explanation: "Correct! MIGHT expresses a possibility that is not certain."
     },
     {
-      text: "may",
+      text: "She has to be late.",
       score: 0,
       type: "Wrong",
-      explanation: "MAY indicaria permissão, mas os torcedores não têm essa permissão."
-    },
-    {
-      text: "have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "HAVE TO significaria que eles são obrigados a sentar onde quiserem, o que não faz sentido."
+      explanation: "HAVE TO expresses necessity."
     }
   ]
 },
-
-{
-  text: "The referee _____ stop the game if there is dangerous weather, but the decision is up to him.",
-  options: [
-    {
-      text: "may",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! MAY indica que algo é permitido ou possível."
-    },
-    {
-      text: "can't",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN'T indicaria que o árbitro não pode parar o jogo, o que não é verdade."
-    },
-    {
-      text: "shouldn't",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULDN'T significaria que ele não deveria parar o jogo."
-    },
-    {
-      text: "don't have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "DON'T HAVE TO indica ausência de obrigação, mas a frase fala sobre uma opção permitida."
-    }
-  ]
-},
-
 {
   text: "Fans _____ travel to another country to enjoy the World Cup. They can watch it on TV.",
   options: [
@@ -362,217 +726,8 @@ let allQuestions = [
       explanation: "HAVE TO indicaria obrigação. Os torcedores podem assistir pela TV."
     }
   ]
-},
+}
 
-{
-  text: "Players _____ respect the referee's decisions during the match.",
-  options: [
-    {
-      text: "can't",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN'T indicaria proibição. A frase fala sobre uma obrigação."
-    },
-    {
-      text: "may",
-      score: 0,
-      type: "Wrong",
-      explanation: "MAY indica permissão. Respeitar o árbitro não é opcional."
-    },
-    {
-      text: "must",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! MUST é usado para regras e obrigações."
-    },
-    {
-      text: "don't have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "DON'T HAVE TO significa que algo não é necessário. Respeitar o árbitro é obrigatório."
-    }
-  ]
-},
-
-{
-  text: "A coach _____ enter the field during the game without permission.",
-  options: [
-    {
-      text: "can",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN indica permissão. O técnico não tem essa permissão."
-    },
-    {
-      text: "can't",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! CAN'T indica que algo não é permitido."
-    },
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma regra."
-    },
-    {
-      text: "have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "HAVE TO indica obrigação. O técnico não é obrigado a entrar em campo. Muito pelo contrário."
-    }
-  ]
-},
-
-{
-  text: "Fans _____ bring food from home because food is available inside the stadium.",
-  options: [
-    {
-      text: "don't have to",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! DON'T HAVE TO significa que algo não é necessário."
-    },
-    {
-      text: "must",
-      score: 0,
-      type: "Wrong",
-      explanation: "MUST indicaria obrigação. Os torcedores não são obrigados a levar comida."
-    },
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é um conselho. A frase fala sobre necessidade."
-    },
-    {
-      text: "may",
-      score: 0,
-      type: "Wrong",
-      explanation: "MAY indica permissão. O foco da frase é que não é necessário levar comida."
-    }
-  ]
-},
-
-{
-  text: "Players _____ argue aggressively with the referee. It is against the rules.",
-  options: [
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma proibição."
-    },
-    {
-      text: "can",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN indica permissão. Os jogadores não têm essa permissão."
-    },
-    {
-      text: "may",
-      score: 0,
-      type: "Wrong",
-      explanation: "MAY indica possibilidade ou permissão. A ação é proibida."
-    },
-    {
-      text: "mustn't",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! MUSTN'T é usado para proibições."
-    }
-  ]
-},
-
-{
-  text: "Players _____ wear shin guards during a match.",
-  options: [
-    {
-      text: "must",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! MUST é usado para regras e obrigações."
-    },
-    {
-      text: "don't have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "DON'T HAVE TO significaria que não é necessário usar caneleiras."
-    },
-    {
-      text: "may",
-      score: 0,
-      type: "Wrong",
-      explanation: "MAY indica permissão. O uso de caneleiras é obrigatório."
-    },
-    {
-      text: "shouldn't",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULDN'T significaria que não deveriam usar caneleiras."
-    }
-  ]
-},
-
-{
-  text: "A substitute player _____ enter the field before the referee gives permission.",
-  options: [
-    {
-      text: "can",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN indica permissão. O jogador não tem essa permissão."
-    },
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é usado para conselhos. A frase fala sobre uma regra."
-    },
-    {
-      text: "must",
-      score: 0,
-      type: "Wrong",
-      explanation: "MUST indicaria obrigação. O jogador não é obrigado a entrar."
-    },
-    {
-      text: "can't",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! CAN'T indica que algo não é permitido."
-    }
-  ]
-},
-
-{
-  text: "Visitors _____ enter the players' locker room without special permission.",
-  options: [
-    {
-      text: "can",
-      score: 0,
-      type: "Wrong",
-      explanation: "CAN indica permissão. Os visitantes não têm essa permissão."
-    },
-    {
-      text: "should",
-      score: 0,
-      type: "Wrong",
-      explanation: "SHOULD é usado para conselhos. A frase fala sobre permissão."
-    },
-    {
-      text: "have to",
-      score: 0,
-      type: "Wrong",
-      explanation: "HAVE TO indica obrigação. Os visitantes não são obrigados a entrar."
-    },
-    {
-      text: "may not",
-      score: 1,
-      type: "Correct",
-      explanation: "Exactly! MAY NOT indica que algo não é permitido."
-    }
-  ]
-},
 ];
 
 
